@@ -37,7 +37,8 @@ switch (opcion) {
     comida = "Pizza";
     break;
   case 4:
-    comida = "papas fritas";
+    comida = "Papas Fritas";
+    break;
   default:
     alert("La opción no es correcta");
 }
@@ -56,3 +57,4 @@ if (eleccion == "vegano" || eleccion == "vegetariano") {
 } else {
   alert("Lleva carne");
 }
+alert(envio());
