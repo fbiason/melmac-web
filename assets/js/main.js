@@ -1,8 +1,15 @@
 // ENTRADA > PROCESO > SALIDA //
 
-/*CONTROL DE FLUJOS*/
+/*// FUNCTION //*/
+function envio(gasto) {
+  if (gasto > 1000) {
+    return "Su envio es gratis";
+  } else {
+    return "Debe abonar $300 el envio";
+  }
+}
 
-//Carta completa
+//Menú
 let menu =
   "Seleccione el menú: \n" +
   "1. Hamburguesa \n" +
@@ -31,43 +38,21 @@ switch (opcion) {
     break;
   case 4:
     comida = "papas fritas";
+  default:
+    alert("La opción no es correcta");
 }
 
-/*CONDICIONES COMPUESTA CON ||*/
-let eleccion = prompt(
-  "¿Qué tipo de " + comida + " desea (vegano o con carne)?"
-);
+/*CONDICIONES COMPUESTA CON &&*/
+let eleccion = prompt("¿Qué tipo de " + comida + " desea (vegano o carne)?");
 while (
   eleccion != "vegano" &&
   eleccion != "vegetariano" &&
-  eleccion != "con carne"
+  eleccion != "carne"
 ) {
-  eleccion = prompt("¿Qué tipo de " + comida + " desea (vegano o con carne)?");
+  eleccion = prompt("¿Qué tipo de " + comida + " desea (vegano o carne)?");
 }
 if (eleccion == "vegano" || eleccion == "vegetariano") {
   alert("No lleva carne");
 } else {
   alert("Lleva carne");
 }
-
-/*CICLOS*/
-//--- FOR ---//
-//let soloPares = parseInt(prompt("Indique hasta que número quiere sumar"));
-
-//for (let i = 2; i <= soloPares; i = i + 2) {
-//  alert("Solo sumamos pares, desde " + i + " hasta " + soloPares);
-//}
-
-//--- WHILE ---//
-//let cantidadPanchos = prompt("¿Cuantos Panchos puede comer?");
-//while (cantidadPanchos != "PROVECHO") {
-//  alert("Acaba de comer " + cantidadPanchos + " Panchos");
-//  cantidadPanchos = prompt("¿Cuantas Panchos más desea comer?");
-//}
-
-//---DO... WHILE---//
-//let clave = "CoderHouse";
-
-//do {
-//  clave = prompt("Introduzca la clave");
-//} while (clave != "CoderHouse");
