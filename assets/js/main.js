@@ -1,6 +1,6 @@
 // ENTRADA > PROCESO > SALIDA //
 
-/*// FUNCTION //*/
+/*// function //*/
 function envio(gasto) {
   if (gasto > 1000) {
     return "Su envio es gratis";
@@ -19,32 +19,37 @@ let menu =
 
 var condicion = true;
 
-do {
-  var opcion = parseInt(prompt(menu));
-  if (!isNaN(opcion)) condicion = false;
-} while (condicion);
+const seleccionComida = () => {
+  do {
+    var opcion = parseInt(prompt(menu));
+    if (!isNaN(opcion)) condicion = false;
+  } while (condicion);
 
-let comida;
+  let comida = { nombre: "", precio: 1 };
 
-switch (opcion) {
-  case 1:
-    comida = "Hamburguesa";
-    break;
-  case 2:
-    comida = "Empanadas";
-    break;
-  case 3:
-    comida = "Pizza";
-    break;
-  case 4:
-    comida = "Papas Fritas";
-    break;
-  default:
-    alert("La opción no es correcta");
-}
+  switch (opcion) {
+    case 1:
+      (comida.nombre = "Hamburguesa"), (comida.precio = 1100);
+      return comida;
+    case 2:
+      (comida.nombre = "Empanadas"), (comida.precio = 1300);
+      return comida;
+    case 3:
+      (comida.nombre = "Pizza"), (comida.precio = 850);
+      return comida;
+    case 4:
+      (comida.nombre = "Papas Fritas"), (comida.precio = 1000);
+    default:
+      alert("La opción no es correcta");
+  }
+};
+
+const comida = seleccionComida();
 
 /*CONDICIONES COMPUESTA CON &&*/
-let eleccion = prompt("¿Qué tipo de " + comida + " desea (vegano o carne)?");
+let eleccion = prompt(
+  "¿Qué tipo de " + comida.nombre + " desea (vegano o carne)?"
+);
 while (
   eleccion != "vegano" &&
   eleccion != "vegetariano" &&
@@ -57,4 +62,6 @@ if (eleccion == "vegano" || eleccion == "vegetariano") {
 } else {
   alert("Lleva carne");
 }
-alert(envio());
+
+const costoDeEnvio = envio(comida.precio);
+alert(costoDeEnvio);

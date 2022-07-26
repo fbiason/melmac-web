@@ -1,0 +1,22 @@
+{
+  "name": "melmac-web",
+  "version": "1.0.0",
+  "description": "Desarrollado por BIASON FRANCO\r Clase: JavaScript\r Profesor: Verón Javier\r Tutor: Baladi Jean Paul\r mail: franco.biason@gmail.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fbiason/melmac-web.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fbiason/melmac-web/issues"
+  },
+  "homepage": "https://github.com/fbiason/melmac-web#readme",
+  "dependencies": {
+    "test": "^3.1.0"
+  }
+}
