@@ -1,3 +1,13 @@
+const productos = [
+  //creacionDeArray - elArraySeLlamaProductos
+  { id: 1, nombre: "Hamburguesa", precio: 1100 }, //definiciónDeObjetos
+  { id: 2, nombre: "Empanadas", precio: 1300 }, //definiciónDeObjetos
+  { id: 3, nombre: "Pizza", precio: 850 }, //definiciónDeObjetos
+  { id: 4, nombre: "Papas Fritas", precio: 1100 }, //definiciónDeObjetos
+  { id: 5, nombre: "Milanesa", precio: 2500 }, //definiciónDeObjetos
+  { id: 6, nombre: "Sandwiches", precio: 1200 }, //definiciónDeObjetos
+];
+
 function envio(gasto) {
   //funcion - nombreDeFuncion - (parametro)
   if (gasto > 2000) {
@@ -9,22 +19,20 @@ function envio(gasto) {
   }
 }
 
-const productos = [
-  //creacionDeArray - elArraySeLlamaProductos
-  { id: 1, nombre: "Hamburguesa", precio: 1100 }, //definiciónDeObjetos
-  { id: 2, nombre: "Empanadas", precio: 1300 }, //definiciónDeObjetos
-  { id: 3, nombre: "Pizza", precio: 850 }, //definiciónDeObjetos
-  { id: 4, nombre: "Papas Fritas", precio: 1100 }, //definiciónDeObjetos
-  { id: 5, nombre: "Milanesa", precio: 2500 }, //definiciónDeObjetos
-  { id: 6, nombre: "Sandwiches", precio: 1200 }, //definiciónDeObjetos
-];
+function sumaProductos() {
+  let gasto = productos.reduce(
+    (envioA, envioB) => envioA.precio + envioB.precio
+  ); //reduce ejecuta una funcion reductora sobre cada elemento de un array, devolviendo un resultaod con un único valor
+  envio(gasto);
+}
+sumaProductos();
 
 class Producto {
   constructor(objeto) {
     this.id = objeto.id; //la propiedad ID coincide con la variable ID
     this.nombre = objeto.nombre;
     this.precio = objeto.precio;
-    this.descuento = 20;
+    this.descuento = 10;
   }
 
   aplicarDescuento() {
@@ -120,7 +128,7 @@ function mostrarProductosPedido() {
     for (let producto_pedido of pedido) {
       let producto = new Producto(producto_pedido);
       console.log("Precio Original: $" + producto.precio);
-      producto.aplicarDescuento(); //si el pedido contiene más de 2 productos se aplica el 20% de descuento
+      producto.aplicarDescuento(); //si el pedido contiene más de 2 productos se aplica el 10% de descuento
       console.log("Precio con 20% de descuento: $" + producto.precio);
       total_pagar += producto.precio;
       salida +=
