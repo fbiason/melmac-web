@@ -1,11 +1,11 @@
 const productos = [
   //creacionDeArray - elArraySeLlamaProductos
   { id: 1, nombre: "Hamburguesa", precio: 1100 }, //definiciónDeObjetos
-  { id: 2, nombre: "Empanadas", precio: 1300 }, //definiciónDeObjetos
-  { id: 3, nombre: "Pizza", precio: 850 }, //definiciónDeObjetos
-  { id: 4, nombre: "Papas Fritas", precio: 1100 }, //definiciónDeObjetos
-  { id: 5, nombre: "Milanesa", precio: 2500 }, //definiciónDeObjetos
-  { id: 6, nombre: "Sandwiches", precio: 1200 }, //definiciónDeObjetos
+  { id: 2, nombre: "Empanadas", precio: 1300 },
+  { id: 3, nombre: "Pizza", precio: 850 },
+  { id: 4, nombre: "Papas Fritas", precio: 1100 },
+  { id: 5, nombre: "Milanesa", precio: 2500 },
+  { id: 6, nombre: "Sandwiches", precio: 1200 },
 ];
 
 function envio(gasto) {
@@ -18,14 +18,6 @@ function envio(gasto) {
     return "Debe abonar $300 el envio"; //me informa mediante string que debo abonar $300 el envio
   }
 }
-
-function sumaProductos() {
-  let gasto = productos.reduce(
-    (envioA, envioB) => envioA.precio + envioB.precio
-  ); //reduce ejecuta una funcion reductora sobre cada elemento de un array, devolviendo un resultaod con un único valor
-  envio(gasto);
-}
-sumaProductos();
 
 class Producto {
   constructor(objeto) {
@@ -129,7 +121,7 @@ function mostrarProductosPedido() {
       let producto = new Producto(producto_pedido);
       console.log("Precio Original: $" + producto.precio);
       producto.aplicarDescuento(); //si el pedido contiene más de 2 productos se aplica el 10% de descuento
-      console.log("Precio con 20% de descuento: $" + producto.precio);
+      console.log("Precio con 10% de descuento: $" + producto.precio);
       total_pagar += producto.precio;
       salida +=
         producto.id + " - " + producto.nombre + " $" + producto.precio + "\n";
@@ -146,5 +138,7 @@ function mostrarProductosPedido() {
 cargarProductosPedido();
 mostrarProductosAEliminar();
 
-const costoDeEnvio = envio(productos.precio);
-alert(costoDeEnvio);
+let total = pedido.map((x) => x.precio).reduce((a, b) => a + b); //map me esta mostrando todos los precios del array. Reduce me sumo todos los precios del array
+
+console.log(total);
+alert(envio(total));
