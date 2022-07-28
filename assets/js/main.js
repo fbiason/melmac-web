@@ -1,67 +1,142 @@
-// ENTRADA > PROCESO > SALIDA //
-
-/*// function //*/
 function envio(gasto) {
-  if (gasto > 1000) {
-    return "Su envio es gratis";
+  //funcion - nombreDeFuncion - (parametro)
+  if (gasto > 2000) {
+    //si (parametro) > 2000
+    return "Su envio es gratis"; //me informa mediante string que mi envio es gratis
   } else {
-    return "Debe abonar $300 el envio";
+    //caso contrario
+    return "Debe abonar $300 el envio"; //me informa mediante string que debo abonar $300 el envio
   }
 }
 
-//Menú
-let menu =
-  "Seleccione el menú: \n" +
-  "1. Hamburguesa \n" +
-  "2. Empanadas \n" +
-  "3. Pizza \n" +
-  "4. Papas Fritas \n";
+const productos = [
+  //creacionDeArray - elArraySeLlamaProductos
+  { id: 1, nombre: "Hamburguesa", precio: 1100 }, //definiciónDeObjetos
+  { id: 2, nombre: "Empanadas", precio: 1300 }, //definiciónDeObjetos
+  { id: 3, nombre: "Pizza", precio: 850 }, //definiciónDeObjetos
+  { id: 4, nombre: "Papas Fritas", precio: 1100 }, //definiciónDeObjetos
+  { id: 5, nombre: "Milanesa", precio: 2500 }, //definiciónDeObjetos
+  { id: 6, nombre: "Sandwiches", precio: 1200 }, //definiciónDeObjetos
+];
 
-var condicion = true;
-
-const seleccionComida = () => {
-  do {
-    var opcion = parseInt(prompt(menu));
-    if (!isNaN(opcion)) condicion = false;
-  } while (condicion);
-
-  let comida = { nombre: "", precio: 1 };
-
-  switch (opcion) {
-    case 1:
-      (comida.nombre = "Hamburguesa"), (comida.precio = 1100);
-      return comida;
-    case 2:
-      (comida.nombre = "Empanadas"), (comida.precio = 1300);
-      return comida;
-    case 3:
-      (comida.nombre = "Pizza"), (comida.precio = 850);
-      return comida;
-    case 4:
-      (comida.nombre = "Papas Fritas"), (comida.precio = 1000);
-    default:
-      alert("La opción no es correcta");
+class Producto {
+  constructor(objeto) {
+    this.id = objeto.id; //la propiedad ID coincide con la variable ID
+    this.nombre = objeto.nombre;
+    this.precio = objeto.precio;
+    this.descuento = 20;
   }
-};
 
-const comida = seleccionComida();
-
-/*CONDICIONES COMPUESTA CON &&*/
-let eleccion = prompt(
-  "¿Qué tipo de " + comida.nombre + " desea (vegano o carne)?"
-);
-while (
-  eleccion != "vegano" &&
-  eleccion != "vegetariano" &&
-  eleccion != "carne"
-) {
-  eleccion = prompt("¿Qué tipo de " + comida + " desea (vegano o carne)?");
-}
-if (eleccion == "vegano" || eleccion == "vegetariano") {
-  alert("No lleva carne");
-} else {
-  alert("Lleva carne");
+  aplicarDescuento() {
+    if (pedido.length > 1) {
+      //cuando se aplica la propiedad length a un array nos devuelve la cantidad de elementos que tiene dicho array. Si el array pedido tiene más de 2 objetos se aplica el descuento
+      this.precio = this.precio - (this.precio * this.descuento) / 100;
+    }
+  }
 }
 
-const costoDeEnvio = envio(comida.precio);
+const pedido = []; //Array del Pedido - Productos seleccionado por el cliente
+
+function agregarProducto(producto) {
+  //funcion - nombreDeFuncion - (parametro)
+  pedido.push(producto); //Agrego el Producto al Array Pedido
+  console.log("Producto Agregado!");
+  console.log(pedido);
+}
+
+function eliminarProducto(id) {
+  //funcion - nombreDeFuncion - (parametro)
+  let pos = pedido.indexOf((elemento) => elemento.id == id); //IndexOf: Busco la posición donde está el Producto en mi pedido. La condición es que la variable "elemento" recorra el Array "pedido" y compare si es = al ID
+  pedido.splice(pos, 1); //splice: cuantos elementos quiero borrar
+  console.log("Producto Eliminado!");
+  console.log(pedido);
+}
+
+function buscarProducto(id) {
+  return productos.find((elemento) => elemento.id == id); //Devuelve el Producto (Objeto) por el ID especificado.
+}
+
+function cargarProductosPedido() {
+  //la funcion va a mostrar el menú donde se cargan los productos al carrito
+  let salida = //en la variable SALIDA se carga cada uno de los elementos Productos y los muestra en un prompt
+    "Seleccione los productos que desea agregar a su pedido. Clic en CANCELAR para terminar la carga:\n\n";
+
+  for (let producto of productos) {
+    //for...of: se declaro la varialbe Producto y la lista Productos
+    salida +=
+      producto.id + " - " + producto.nombre + " $" + producto.precio + "\n";
+  }
+
+  let id_producto = 0;
+
+  while (id_producto != null) {
+    let id_producto = prompt(salida); //la variable ID_PRODCUTO va a tener el prompt de la variable SALIDA
+
+    if (id_producto != null) {
+      id_producto = parseInt(id_producto);
+      //console.log(id_producto); // Número del Producto
+      let producto = buscarProducto(id_producto);
+      //console.log(producto); // Objeto Producto
+      agregarProducto(producto);
+    } else {
+      break;
+    }
+  }
+}
+
+function mostrarProductosAEliminar() {
+  let salida = "";
+
+  if (pedido.length > 0) {
+    salida =
+      "Seleccione el Producto a Eliminar. Pulse Cancelar para no Eliminar ninguno.\n";
+
+    for (let producto of pedido) {
+      salida +=
+        producto.id + " - " + producto.nombre + " $" + producto.precio + "\n";
+    }
+
+    let id_producto = prompt(salida);
+
+    if (id_producto != null) {
+      id_producto = parseInt(id_producto);
+      eliminarProducto(id_producto);
+    }
+
+    mostrarProductosPedido();
+  } else {
+    salida = "No se encontraron Productos en el Pedido!";
+    alert(salida);
+  }
+}
+
+function mostrarProductosPedido() {
+  let salida = " ";
+
+  if (pedido.length > 0) {
+    salida = "Productos Seleccionados:\n";
+    let total_pagar = 0;
+
+    for (let producto_pedido of pedido) {
+      let producto = new Producto(producto_pedido);
+      console.log("Precio Original: $" + producto.precio);
+      producto.aplicarDescuento(); //si el pedido contiene más de 2 productos se aplica el 20% de descuento
+      console.log("Precio con 20% de descuento: $" + producto.precio);
+      total_pagar += producto.precio;
+      salida +=
+        producto.id + " - " + producto.nombre + " $" + producto.precio + "\n";
+    }
+
+    salida += "\n Total a Pagar: $" + total_pagar; //la variable salida se concatena con la variable total_pagar
+  } else {
+    salida = "No se encontraron Productos en el Pedido!";
+  }
+
+  alert(salida);
+}
+
+cargarProductosPedido();
+mostrarProductosAEliminar();
+
+const costoDeEnvio = envio(productos.precio);
 alert(costoDeEnvio);
