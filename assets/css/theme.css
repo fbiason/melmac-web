@@ -3897,7 +3897,7 @@ fieldset:disabled .btn {
 .btn-danger.active,
 .show > .btn-danger.dropdown-toggle {
   color: #fffefe;
-  background-color: #c15b20;
+  background-color: #302a26;
   border-color: #b5561e;
 }
 
@@ -4012,14 +4012,14 @@ fieldset:disabled .btn {
 }
 
 .btn-outline-primary {
-  color: #ffb30e;
-  border-color: #ffb30e;
+  color: #212121;
+  border-color: #212121;
 }
 
 .btn-outline-primary:hover {
   color: #616161;
-  background-color: #ffb30e;
-  border-color: #ffb30e;
+  background-color: #212121;
+  border-color: #212121;
 }
 
 .btn-check:focus + .btn-outline-primary,
@@ -4034,8 +4034,8 @@ fieldset:disabled .btn {
 .btn-outline-primary.active,
 .btn-outline-primary.dropdown-toggle.show {
   color: #616161;
-  background-color: #ffb30e;
-  border-color: #ffb30e;
+  background-color: #212121;
+  border-color: #212121;
 }
 
 .btn-check:checked + .btn-outline-primary:focus,
@@ -4049,7 +4049,7 @@ fieldset:disabled .btn {
 
 .btn-outline-primary:disabled,
 .btn-outline-primary.disabled {
-  color: #ffb30e;
+  color: #212121;
   background-color: transparent;
 }
 
@@ -18919,9 +18919,3 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .majestic-tabs .nav-item.show .nav-link {
   border-bottom-color: #f17228;
 }
-
-/*-----------------------------------------------
-|   User Styles
------------------------------------------------*/
-
-/*# sourceMappingURL=theme.css.map */
