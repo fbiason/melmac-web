@@ -142,3 +142,14 @@ let total = pedido.map((x) => x.precio).reduce((a, b) => a + b); //map me esta m
 
 console.log(total);
 alert(envio(total));
+
+//--- innerHTML ---// AGREGAR IMAGENES
+/*for (const producto of productos) {
+  let contenedor = document.createElement("div");
+  contenedor.innerHTML = `<h3>ID: ${prod.id}</h3>
+                          <p>Producto: ${prod.nombre}<br>
+                          <img src="images/${prod.imagen}" width="180"></br>
+                          <b>$ ${prod.precio}</b></p>
+                          <hr>`;
+  document.getElementById("resultado").appendChild(contenedor);
+}*/
