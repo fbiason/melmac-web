@@ -145,7 +145,7 @@ alert(envio(total));
 
 //--------------------------------------------//
 //--- getElementById ---//
-let armarMenu = document.getElementById("armarMenu");
+/*let armarMenu = document.getElementById("armarMenu");
 armarMenu.style = "py-4 overflow-hidden";
 armarMenu.style.backgroundColor = "black";
 console.log(armarMenu.innerHTML);
@@ -159,4 +159,4 @@ console.log(comidaMenu[0].innerHTML);
 console.log(comidaMenu[1].innerHTML);
 console.log(comidaMenu[2].innerHTML);
 console.log(comidaMenu[3].innerHTML);
-console.log(comidaMenu[4].innerHTML);
+console.log(comidaMenu[4].innerHTML);*/
