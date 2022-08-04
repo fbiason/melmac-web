@@ -1,59 +1,6 @@
 /* -------------------------------------------------------------------------- */
 /*                                 Theme                                      */
 /* -------------------------------------------------------------------------- */
-/* prettier-ignore */
-/* -------------------------------------------------------------------------- */
-/*                                  Utilities                                 */
-/* -------------------------------------------------------------------------- */
-/*-----------------------------------------------
-|   Bootstrap Styles
------------------------------------------------*/
-/*!
- * Bootstrap v5.0.0-alpha1 (https://getbootstrap.com/)
- * Copyright 2011-2020 The Bootstrap Authors
- * Copyright 2011-2020 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- */
-:root {
-  --bs-blue: #2780ed;
-  --bs-indigo: #6237ff;
-  --bs-purple: #a71cff;
-  --bs-pink: #d42da3;
-  --bs-red: #f17228;
-  --bs-orange: #f17228;
-  --bs-yellow: #ffb30e;
-  --bs-green: #79b93c;
-  --bs-teal: #53f283;
-  --bs-cyan: #24ffea;
-  --bs-white: #fffefe;
-  --bs-gray: #9e9e9e;
-  --bs-gray-dark: #616161;
-  --bs-primary: #ffb30e;
-  --bs-secondary: #2780ed;
-  --bs-success: #79b93c;
-  --bs-info: #24ffea;
-  --bs-warning: #ffb30e;
-  --bs-danger: #f17228;
-  --bs-light: #f9fafd;
-  --bs-dark: #212121;
-  --bs-font-sans-serif: "Source Sans Pro", "Open Sans", -apple-system,
-    BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  --bs-font-monospace: "SFMono-Regular", Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", monospace;
-  --bs-gradient: linear-gradient(
-    180deg,
-    rgba(255, 254, 254, 0.15),
-    rgba(255, 254, 254, 0)
-  );
-}
-
-*,
-*::before,
-*::after {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
 
 @media (prefers-reduced-motion: no-preference) {
   :root {
@@ -87,27 +34,6 @@ hr:not([size]) {
   height: 1px;
 }
 
-h1,
-.h1,
-h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4,
-h5,
-.h5,
-h6,
-.h6 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  font-family: "Source Sans Pro", "Open Sans", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol";
-  font-weight: 700;
-  line-height: 1.2;
-  color: #212121;
-}
 
 h1,
 .h1 {
