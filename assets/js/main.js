@@ -155,8 +155,8 @@ armarMenu.innerHTML = tituloSection;
 
 //--- getElementsByCassName ---//
 let comidaMenu = document.getElementsByClassName("comidaMenu");
-console.log(comidaMenu[0].innerHTML);
-console.log(comidaMenu[1].innerHTML);
-console.log(comidaMenu[2].innerHTML);
-console.log(comidaMenu[3].innerHTML);
-console.log(comidaMenu[4].innerHTML);*/
+console.log(comidaMenu[0].innerHTML();
+console.log(comidaMenu[1].innerHTML();
+console.log(comidaMenu[2].innerHTML();
+console.log(comidaMenu[3].innerHTML();
+console.log(comidaMenu[4].innerHTML();*/
