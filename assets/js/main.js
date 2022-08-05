@@ -12,7 +12,7 @@ let bebida = [
   "Coca con <br>",
 ];
 
-function displayCard() {
+function usoDeDom() {
   let bebidaConComida =
     tipoComida[Math.floor(Math.random() * tipoComida.length)];
   let verBebida = bebida[Math.floor(Math.random() * bebida.length)];

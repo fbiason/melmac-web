@@ -34,7 +34,6 @@ hr:not([size]) {
   height: 1px;
 }
 
-
 h1,
 .h1 {
   font-size: calc(1.37383rem + 1.48598vw);
@@ -2348,7 +2347,7 @@ progress {
 }
 
 .table-primary {
-  --bs-table-bg: #fff0cf;
+  --bs-table-bg: #000000;
   --bs-table-striped-bg: #f7e9ca;
   --bs-table-striped-color: #616161;
   --bs-table-active-bg: #efe2c4;
@@ -17789,60 +17788,6 @@ ul {
   padding-left: 1.1rem;
 }
 
-/* -------------------------------------------------------------------------- */
-/*                               Browser Fixing                               */
-/* -------------------------------------------------------------------------- */
-.firefox .dropcap:first-letter {
-  margin-top: 0.175em;
-}
-
-.chrome .btn-close {
-  background-clip: unset;
-}
-
-/* -------------------------------------------------------------------------- */
-/*                                    Text                                    */
-/* -------------------------------------------------------------------------- */
-.text-smallcaps {
-  font-variant: small-caps;
-}
-
-.text-superscript {
-  vertical-align: super;
-}
-
-.text-word-break {
-  word-break: break-word;
-}
-
-/*-----------------------------------------------
-|   Font family
------------------------------------------------*/
-.font-sans-serif {
-  font-family: "Source Sans Pro", "Open Sans", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol";
-}
-
-.font-base {
-  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol";
-}
-
-/*-----------------------------------------------
-|   Error Page
------------------------------------------------*/
-.fs-error {
-  font-size: 7rem;
-}
-
-@media (min-width: 576px) {
-  .fs-error {
-    font-size: 10rem;
-  }
-}
-
 /*-----------------------------------------------
 |   Text alignment
 -----------------------------------------------*/
@@ -18792,56 +18737,4 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   padding: 0px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.border-navbar-gradient {
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(rgba(255, 255, 255, 0)),
-    color-stop(10.94%, rgba(255, 255, 255, 0.890625)),
-    color-stop(86.46%, #ffffff),
-    to(rgba(255, 255, 255, 0))
-  );
-  background: -o-linear-gradient(
-    left,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.890625) 10.94%,
-    #ffffff 86.46%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.890625) 10.94%,
-    #ffffff 86.46%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  -webkit-backdrop-filter: blur(60px);
-  backdrop-filter: blur(60px);
-}
-
-.backdrop {
-  -webkit-backdrop-filter: blur(4px);
-  backdrop-filter: blur(4px);
-}
-
-.majestic-tabs {
-  border-bottom: 0;
-}
-
-.majestic-tabs .nav-link {
-  border: 2px solid transparent;
-  color: #616161;
-}
-
-.majestic-tabs .nav-link:hover,
-.majestic-tabs .nav-link:focus {
-  border-color: transparent;
-}
-
-.majestic-tabs .nav-link.active,
-.majestic-tabs .nav-item.show .nav-link {
-  border-bottom-color: #f17228;
 }
