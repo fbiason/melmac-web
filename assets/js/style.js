@@ -6,6 +6,11 @@ style.innerHTML = `
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background: rgba(34, 34, 34, 0.448);
+}
+
+.container-dom p {
+    color: black;
 }
 
 button {
