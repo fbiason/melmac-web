@@ -1,114 +1,104 @@
 <!DOCTYPE html>
-<html lang="en-US" dir="ltr">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<html lang="es">
 
-    <!-- ===============================================-->
-    <!--    Document Title-->
-    <!-- ===============================================-->
-    <title>MELMAC ROTISERÍA Y CONFITERÍA</title>
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Melmac Rotisería y Confitería</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
 
-    <!-- ===============================================-->
-    <!--    Favicon--->
-    <!-- ===============================================-->
+  <!-- Favicons -->
+  <link href="img/logo/favicon.png" rel="icon">
 
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="assets/img/logo/favicon.png"
-    />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
 
-    <!-- ===============================================-->
-    <!--    Stylesheets-->
-    <!-- ===============================================-->
-    <link href="assets/css/theme.css" rel="stylesheet" />
-    <link href="assets/css/style.css" rel="stylesheet" />
-  </head>
+  <!-- Vendor CSS Files -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="vendor/aos/aos.css" rel="stylesheet">
+  <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <body>
-    <!-- ===============================================-->
-    <!--    Main Content-->
-    <!-- ===============================================-->
-    <main class="main" id="top">
-      <nav
-        class="navbar navbar-expand-lg navbar-light bg-light fixed-top"
-        data-navbar-on-scroll="data-navbar-on-scroll"
-      >
+  <!-- Template Main CSS File -->
+  <link href="./css/styles.css" rel="stylesheet" >
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center" style="background-color: grey">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="img/logo/logo-horizontal.png" class="img-fluid" alt="ml legales" />
+      </a>
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="index.html" class="active">Inicio</a></li>
+          <li><a href="#">Menú</a></li>
+          <li><a href="#">Mezclas</a></li>
+        </ul>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+  <main id="main">
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="hero">
+
+      <div class="info d-flex align-items-center">
         <div class="container">
-          <a class="navbar-brand d-inline-flex" href="index.html"
-            ><img
-              class="d-inline-block"
-              src="assets/img/logo/logo-horizontal.png"
-              alt="logo"
-            /></a
-          >
-          <div
-            class="collapse navbar-collapse border-top border-lg-0 my-2 mt-lg-0"
-            id="navbarSupportedContent"
-          >
-            <div class="mx-auto pt-5 pt-lg-0 d-block d-lg-none d-xl-block">
-              <p class="mb-0 fw-bold">
-                Dirección:<i class="fas fa-map-marker-alt text-warning mx-2"></i
-                ><span class="fw-normal">Entre Rios 316, Rio Gallegos, Santa Cruz </span
-                ><span>Teléfono:</span><i>2966449951</i>
-              </p>
+          <div class="row justify-content-center">
+            <div class="col-lg-6 text-center">
+              <h2 data-aos="fade-down">Bienvenidos a <br>        <img src="img/logo/logo-melmac.png" class="img-fluid" alt="ml legales" /></h2>
             </div>
           </div>
         </div>
-      </nav>
-      <section class="py-5 overflow-hidden hero" id="home">
-        <div class="container">
-          <div class="row flex-center">
-            <div class="col-md-5 col-lg-6 order-0 order-md-1 mt-md-0">
-              <a class="img-landing-banner"
-                ><img
-                  class="img-fluid"
-                  src="assets/img/logo/logo-melmac.png"
-                  alt="mila-melmac"
-              /></a>
-            </div>
-            <div class="col-md-7 col-lg-6 py-8 text-md-start text-center">
-              <h1 class="display-1 fs-md-5 fs-lg-6 fs-xl-8 text-light">
-                ¡PROBA LA MILA MELMAC!
-              </h1>
-              <h1 class="text-800 mb-5 fs-4">
-                Ideal para que comas con tus amigos<br
-                  class="d-none d-xxl-block"
-                />¡Hasta 4 personas!
-              </h1>
-            </div>
-          </div>
-        </div>
-      </section>
-
-<!-- <section> Armado de Menu con JS ============================-->
- <section>
-  <div class="container-dom">
-    <button id="btn" onclick="usoDeDom()">
-      <h1>¡Quiero una mezcla rara!</h1>
-    </button>
-    <div class="row">
-      <div class="col-6">
-        <img
-        id="will"                             
-        class="img-fluid rounded-circle h-100"
-        src="assets/img/sorpresa.png"
-        alt="..."
-        width="100%">
       </div>
-      <div class="col-6">
-    <p id="cualquierMenu" class="mt-8"></p>
-</div>
-</div>
-  </div>
- </section>
-  <!-- End <section> Armado de Menu con JS ============================-->
+
+      <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+        <div class="carousel-item active" style="background-image: url(img/rotiseria.jpg)">
+        </div>
+
+    </section><!-- End Hero Section -->
+    <section id="get-started" class="get-started section-bg">
 
 
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
+<!-- INICIO MEZCLA RARA con JS ============================-->
+  <section>
+    <div class="dom">
+      <button id="btn" onclick="usoDeDom()">
+        <h1>¡Quiero una mezcla rara!</h1>
+      </button>
+      <div class="row">
+        <div class="col-6">
+          <img
+          id="will"                             
+          class="img-fluid rounded-circle h-100"
+          src="img/sorpresa.png"
+          alt="..."
+          width="100%">
+        </div>
+        <div class="col-6">
+      <p id="cualquierMenu" class="mt-8"></p>
+    </div>
+    </div>
+    </div>
+   </section>
+    <!-- FIN MEZCLA RARA con JS ============================-->
+  
+
+      <!-- INICIO ARMADO DE MENÚ ============================-->
         <section id="py-4 overflow-hidden">
           <div class="container">
             <div class="row h-100">
@@ -121,14 +111,17 @@
                     <div>
                       <div class="row gx-3 h-100 align-items-center">
 
+                        <!-- inicio del plato -->
                         <div id="comida" class="col-sm-6 col-md-4 col-xl mb-5 h-100">
                         </div>
+                        <!-- fin del plato -->
 
+                        <!-- inicio del plato -->
                         <div class="col-sm-6 col-md-4 col-xl mb-5 h-100">
                           <div class="card card-span h-100 rounded-3">
                             <img
                               class="img-fluid rounded-3 h-100"
-                              src="assets/img/comidas/pizza-muza.jpeg"
+                              src="img/comidas/pizza-muza.jpeg"
                               alt="..."
                             />
                             <div class="card-body ps-0">
@@ -136,9 +129,7 @@
                                 Pizza
                               </h5>
                               <div>
-                                <span class="text-warning me-2"
-                                  ><i class="fas fa-map-marker-alt"></i></span
-                                ><span class="text-primary">Muzarella</span>
+                                <span class="text-primary">Muzarella</span>
                               </div>
                               <span class="text-1000 fw-bold">$850</span>
                             </div>
@@ -152,12 +143,14 @@
                             >
                           </div>
                         </div>
+                        <!-- fin del plato -->
 
+                        <!-- inicio del plato -->
                         <div class="col-sm-6 col-md-4 col-xl mb-5 h-100">
                           <div class="card card-span h-100 rounded-3">
                             <img
                               class="img-fluid rounded-3 h-100"
-                              src="assets/img/comidas/sandwich-pollo.jpeg"
+                              src="img/comidas/sandwich-pollo.jpeg"
                               alt="..."
                             />
                             <div class="card-body ps-0">
@@ -165,9 +158,7 @@
                                 Sandwich
                               </h5>
                               <div>
-                                <span class="text-warning me-2"
-                                  ><i class="fas fa-map-marker-alt"></i></span
-                                ><span class="text-primary">De Pollo con papas</span>
+                                <span class="text-primary">De Pollo con papas</span>
                               </div>
                               <span class="text-1000 fw-bold">$1.200</span>
                             </div>
@@ -181,12 +172,14 @@
                             >
                           </div>
                         </div>
+                        <!-- fin del plato -->
 
+                        <!-- inicio del plato -->
                         <div class="col-sm-6 col-md-4 col-xl mb-5 h-100">
                           <div class="card card-span h-100 rounded-3">
                             <img
                               class="img-fluid rounded-3 h-100"
-                              src="assets/img/comidas/empanadas-bondiola.png"
+                              src="img/comidas/empanadas-bondiola.png"
                               alt="..."
                             />
                             <div class="card-body ps-0">
@@ -194,9 +187,7 @@
                                 Empanadas
                               </h5>
                               <div>
-                                <span class="text-warning me-2"
-                                  ><i class="fas fa-map-marker-alt"></i></span
-                                ><span class="text-primary">Bondiola x14</span>
+                                <span class="text-primary">Bondiola x14</span>
                               </div>
                               <span class="text-1000 fw-bold">$1.300</span>
                             </div>
@@ -210,12 +201,14 @@
                             >
                           </div>
                         </div>
+                        <!-- fin del plato -->
 
+                        <!-- inicio del plato -->
                         <div class="col-sm-6 col-md-4 col-xl mb-5 h-100">
                           <div class="card card-span h-100 rounded-3">
                             <img
                               class="img-fluid rounded-3 h-100"
-                              src="assets/img/comidas/salchipapas.png"
+                              src="img/comidas/salchipapas.png"
                               alt="..."
                             />
                             <div class="card-body ps-0">
@@ -223,9 +216,7 @@
                                 Salchipapas
                               </h5>
                               <div>
-                                <span class="text-warning me-2"
-                                  ><i class="fas fa-map-marker-alt"></i></span
-                                ><span class="text-primary">Salchichas con papas</span>
+                                <span class="text-primary">Salchichas con papas</span>
                               </div>
                               <span class="text-1000 fw-bold">$900</span>
                             </div>
@@ -239,12 +230,14 @@
                             >
                           </div>
                         </div>
-
+                        <!-- fin del plato -->
+                        
+                        <!-- inicio del plato -->
                         <div class="col-sm-6 col-md-4 col-xl mb-5 h-100">
                           <div class="card card-span h-100 rounded-3">
                             <img
                               class="img-fluid rounded-3 h-100"
-                              src="assets/img/comidas/mila-melmac.jpg"
+                              src="img/comidas/mila-melmac.jpg"
                               alt="..."
                             />
                             <div class="card-body ps-0">
@@ -252,9 +245,7 @@
                                 Mila Melmac
                               </h5>
                               <div>
-                                <span class="text-warning me-2"
-                                  ><i class="fas fa-map-marker-alt"></i></span
-                                ><span class="text-primary">Milanesa con papas</span>
+                                <span class="text-primary">Milanesa con papas</span>
                               </div>
                               <span class="text-1000 fw-bold">$2.500</span>
                             </div>
@@ -268,6 +259,7 @@
                             >
                           </div>
                         </div>
+                        <!-- fin del plato -->
 
                       </div>
                     </div>
@@ -278,10 +270,10 @@
           </div>
           <!-- end of .container-->
         </section>
-        <!-- <section> close ============================-->
-      <!-- ============================================-->
+        <!-- FIN DE ARMADO DEL MENÚ ============================-->
 
-      <!-- <section> begin ============================-->
+
+      <!-- INICIO INFO MELMAC ============================-->
       <section class="py-0 bg-primary-gradient">
         <div class="container">
           <div class="row justify-content-center g-0">
@@ -296,7 +288,7 @@
                   <div class="text-center">
                     <img
                       class="shadow-icon"
-                      src="assets/img/img-varias/location.png"
+                      src="img/img-varias/location.png"
                       height="112"
                       alt="..."
                     />
@@ -310,7 +302,7 @@
                   <div class="text-center">
                     <img
                       class="shadow-icon"
-                      src="assets/img/img-varias/order.png"
+                      src="img/img-varias/order.png"
                       height="112"
                       alt="..."
                     />
@@ -324,7 +316,7 @@
                   <div class="text-center">
                     <img
                       class="shadow-icon"
-                      src="assets/img/img-varias/pay.png"
+                      src="img/img-varias/pay.png"
                       height="112"
                       alt="..."
                     />
@@ -337,7 +329,7 @@
                   <div class="text-center">
                     <img
                       class="shadow-icon"
-                      src="assets/img/img-varias/meals.png"
+                      src="img/img-varias/meals.png"
                       height="112"
                       alt="..."
                     />
@@ -352,101 +344,150 @@
         </div>
         <!-- end of .container-->
       </section>
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-      <section class="py-0 pt-6 bg-1000">
-        <div class="container">
-          <hr class="text-900" />
-          <div class="row">
-            <div class="col-6 col-md-4 col-lg-6 col-xxl-6 mb-3">
-              <h5 class="lh-lg fw-bold text-white">Enlaces útiles</h5>
-              <ul class="list-unstyled mb-md-4 mb-lg-0">
-                <li class="lh-lg">
-                  <a class="text-200 text-decoration-none" href="#!"
-                    >Nosotros</a
-                  >
-                </li>
-                <li class="lh-lg">
-                  <a class="text-200 text-decoration-none" href="#!">Contacto</a>
-                </li>
-                <li class="lh-lg">
-                  <a class="text-200 text-decoration-none" href="#!">Aviso Legal</a>
-                </li>
-                <li class="lh-lg">
-                  <a class="text-200 text-decoration-none" href="#!">Política de Privacidad</a>
-                </li>
-              </ul>
-            </div>
+      <!-- FIN INFO MELMAC ============================-->
 
-            <div class="col-12 col-md-8 col-lg-6 col-xxl-4">
-              <h5 class="lh-lg fw-bold text-500">Seguinos en nuetra redes</h5>
-              <div class="text-start my-3">
-                <a href=https://instagram.com/melmacrotiseriayconfiteria>
-                  <svg
-                    class="svg-inline--fa fa-instagram fa-w-14 fs-2 me-2"
-                    aria-hidden="true"
-                    focusable="false"
-                    data-prefix="fab"
-                    data-icon="instagram"
-                    role="img"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 448 512"
-                    width=50
-                    height=50
-                  >
-                    <path
-                      fill="#BDBDBD"
-                      d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
-                    ></path></svg></a
-                ><a href=https://www.facebook.com/melmacrotiseriayconfiteria>
-                  <svg
-                    class="svg-inline--fa fa-facebook fa-w-16 fs-2 mx-2"
-                    aria-hidden="true"
-                    focusable="false"
-                    data-prefix="fab"
-                    data-icon="facebook"
-                    role="img"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 512 512"
-                    width=50
-                    height=50
-                  >
-                    <path
-                      fill="#BDBDBD"
-                      d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"
-                    ></path></svg></a
-                ><a href="#!">
+
+
+      <!-- ======= INICIO SECCIÓN CONTACTO ======= -->
+      <section id="contact" class="contact">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <h2>Contactanos</h2>
+          <div class="row gy-4 mt-4">
+            <div class="col-lg-6">
+              <div class="info-item  d-flex flex-column justify-content-center align-items-center">
+                <i class="bi bi-map"></i>
+                <h3>Dirección</h3>
+                <p>Entre Ríos 316</p>
               </div>
-            </div>
+            </div><!-- End Info Item -->
+
+            <div class="col-lg-3 col-md-6">
+              <div class="info-item d-flex flex-column justify-content-center align-items-center">
+                <i class="bi bi-envelope"></i>
+                <h3>Email</h3>
+                <p>franco.biason@gmail.com</p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="col-lg-3 col-md-6">
+              <div class="info-item  d-flex flex-column justify-content-center align-items-center">
+                <i class="bi bi-telephone"></i>
+                <h3>Teléfono</h3>
+                <p>2966 449951</p>
+              </div>
+            </div><!-- End Info Item -->
+
           </div>
-          <hr class="border border-800" />
-          <div class="row flex-center pb-3">
-              <p class="text-200 text-center text-md-start">
-                Todos los Derechos Reservados &copy; Melmac Rotisería y Confitería, 2022
-              </p>
+
+          <div class="row gy-4 mt-1">
+
+            <div class="col-lg-6 ">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2477.099247212968!2d-69.22528539999999!3d-51.6213911!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbdb6f955b1e2f0cf%3A0x216d3bd08322f330!2sEntre%20R%C3%ADos%20316%2C%20Z9400ITH%20R%C3%ADo%20Gallegos%2C%20Santa%20Cruz!5e0!3m2!1ses-419!2sar!4v1660500723003!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div><!-- End Google Maps -->
+
+            <div class="col-lg-6">
+              <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                <div class="row gy-4">
+                  <div class="col-lg-6 form-group">
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" required>
+                  </div>
+                  <div class="col-lg-6 form-group">
+                    <input type="Teléfono" class="form-control" name="email" id="email" placeholder="Mail" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto" required>
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control" name="message" rows="5" placeholder="Mensaje" required></textarea>
+                </div>
+                <div class="my-3">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Su mensaje fue enviado con éxito. Le responderemos con brevedad. Muchas
+                    gracias.</div>
+                </div>
+                <div class="text-center"><button type="submit">Enviar Mensaje</button></div>
+              </form>
+            </div><!-- End Contact Form -->
+
           </div>
+
         </div>
-        <!-- end of .container-->
-      </section>
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
-    </main>
-    <!-- ===============================================-->
-    <!--    End of Main Content-->
-    <!-- ===============================================-->
+      </section><!-- End Contact Section -->
+      <!-- FIN SECCION CONTACTO -->
 
-    <!-- ===============================================-->
-    <!--    JavaScripts-->
-    <!-- ===============================================-->
-    <script src="assets/js/db.js"></script>
-    <script src="assets/js/style.js"></script>
-    <script src="assets/js/main.js"></script>
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&amp;display=swap"
-      rel="stylesheet"
-    />
-  </body>
+
+      <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
+          class="bi bi-arrow-up-short"></i></a>
+
+      <div id="preloader"></div>
+
+  </main>
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="footer-content position-relative">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 col-md-4">
+            <div class="footer-info">
+              <h3>MELMAC Rotisería y Confitería</h3>
+              <p>Entre Ríos 316, Rio Gallegos<br><br>
+                <strong>Teléfono:</strong>2966 449951<br>
+                <strong>Email:</strong> franco.biason@gmail.com<br>
+              </p>
+            </div>
+          </div><!-- End footer info column-->
+
+          <div class="col-lg-4 col-md-4 footer-links justify-content-center">
+            <h4>Enlaces útiles</h4>
+            <ul>
+              <li><a href="#">Servicios</a></li>
+              <li><a href="#">Contacto</a></li>
+              <li><a href="#">Política de Privacidad</a></li>
+              <li><a href="#">Términos y Condiciones</a></li>
+            </ul>
+          </div><!-- End footer links column-->
+
+          <div class="col-lg-4 col-md-4 footer-links">
+            <h4>Seguinos en nuestras redes</h4>
+            <div class="social-links d-flex mt-3">
+              <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-whatsapp"></i></a>
+            </div>
+          </div><!-- End footer links column-->
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-legal text-center position-relative">
+      <div class="container">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Melmac Rotisería y Confitería 2022</span></strong>. Todos los derechos reservados
+        </div>
+      </div>
+    </div>
+
+  </footer>
+  <!-- End Footer -->
+
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/aos/aos.js"></script>
+  <script src="vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="js/style.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
 </html>
