@@ -1,7 +1,7 @@
 //--- Dom estilo---//
 let style = document.createElement("style");
 style.innerHTML = `
-* .dom {
+* .dom-style {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,7 +9,7 @@ style.innerHTML = `
     background: rgba(34, 34, 34, 0.448);
 }
 
-.dom p {
+.dom-style p {
     color: black;
 }
 
