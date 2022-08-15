@@ -161,7 +161,7 @@ function menuCompleto(comidaNombre, comidaPrecio, comidaImg) {
     .addEventListener("click", borrarPedido);
   totalPedido
     .querySelector(".cantidadComida")
-    .addEventListener("cambiar", cambiarPedido);
+    .addEventListener("change", cambiarPedido);
 
   verPrecioFinalPedido();
 }
@@ -207,103 +207,61 @@ function finalizarCompra() {
 }
 //-------FIN PEDIDO PERSONALIZADO-------//
 
-/* OPCION 2 probada en clase//
-//se crea la variable const llamada "comida" con el Array de Objetos
-const comida = [
-  {
-    id: 1,
-    nombre: "Hamburguesa",
-    descripcion: "Extra queso cheddar",
-    precio: 1100,
-    img: "assets/img/comidas/hamburguesa.png",
-  },
-  {
-    id: 2,
-    nombre: "Pizza",
-    descripcion: "Muzarella",
-    precio: 850,
-    img: "assets/img/comidas/pizza-muza.jpeg",
-  },
-  {
-    id: 3,
-    nombre: "Empanadas",
-    descripcion: "Bondiola x14",
-    precio: 1300,
-    img: "assets/img/comidas/empanadas-bondiola.png",
-  },
-  {
-    id: 4,
-    nombre: "Sandwich",
-    descripcion: "De Pollo con papas",
-    precio: 850,
-    img: "assets/img/comidas/sandwich-pollo.jpeg",
-  },
-  {
-    id: 5,
-    nombre: "Pizza",
-    descripcion: "Muzarella",
-    precio: 1300,
-    img: "assets/img/comidas/pizza-muza.jpeg",
-  },
-  {
-    id: 6,
-    nombre: "Mila Melmac",
-    descripcion: "Milanesa con papas",
-    precio: 2500,
-    img: "assets/img/comidas/mila-melmac.jpg",
-  },
-];
+//-------INICIO EMAIL-------//
 
-//se guarda el Array de Objetos en el localStorage
-//se pone como parametro el Array de Objetos "comida"
-function comidaSeleecionada(comida) {
-  localStorage.setItem("comida"), JSON.stringify(comida);
-}
-//se crea otra función para cargar las comidas al carrito por eso se usa el "getItem"
-//se parsea para que devuelva el Objeto original
-function comidaEnCarrito() {
-  return JSON.parse(localStorage.getItem("comida")) || [];
+//creo la clase "Contacto" que va a tener un constructor y recibe al objeto "contacto"
+class Contacto {
+  constructor(contacto) {
+    //el constructor tiene 4 propiedades, son las que van a estar dentro de los formularios
+    this.nombre = contacto.nombreContacto;
+    this.email = contacto.emailContacto;
+    this.asunto = contacto.asuntoContacto;
+    this.mensaje = contacto.mensajeContacto;
+  }
+  verDatos() {
+    this.nombre = this.nombre.toUpperCase();
+    let contenido = `<b>Nombre:</b> ${this.nombre}<br>
+    <b>Email:</b> ${this.email}<br>
+    <b>Asunto:</b> ${this.asunto}<br>
+    <b>Mensaje:</b> ${this.mensaje}<br>`;
+    document.getElementById("resultado").innerHTML = contenido;
+  }
 }
 
-function armarMenu() {
-  const comida = comidaEnCarrito();
-  let menu = " ";
+function guardarDatos() {
+  //meciono los 4 campos del formulario
+  let nombre = document.getElementById("nombre").value;
+  let email = document.getElementById("email").value;
+  let asunto = document.getElementById("asunto").value;
+  let mensaje = document.getElementById("mensaje").value;
 
-  //va a hacer una iteracion con los platos que hay para elegir (6 por ahora)
-  //llamo las variables nombre, descripcion, precio, img con ${}
-  comida.forEach((comidas) => {
-    menu += `
-    <div class="col-md-3">
-        <div class="card">
-        <img
-        class="card-img-top"
-        src="assets/img/comidas/${comida.img}" 
-        alt="${comida.nombre}"
-      />
-          <div class="card-body">
-            <h5>${comida.nombre}</h5>
-                <div>
-                  <span class="text-warning me-2">
-                  <i class="fas fa-map-marker-alt"></i></span>
-                  <span class="text-primary">${comida.descripcion}</span>
-            </div>
-            <span class="text-1000 fw-bold">$${comida.precio}</span>
-          </div>
-        </div>
-      <div class="d-grid gap-2">
-      <a 
-        class="btn btn-lg btn-danger"
-        href="#!"
-        role="button">Subir al carrito</a>
-      </div>
-    </div>`;
-  });
+  const datos = {
+    nombreContacto: nombre,
+    emailContacto: email,
+    asuntoContacto: asunto,
+    mensajeContacto: mensaje,
+  };
 
-  document.getElementById("comida").innerHTML = menu;
+  console.log(datos); //Muestro el Objeto Creado
+  guardarDatosEnLS(datos);
+
+  let datosFormulario = recuperarDatos();
+  console.log(datosFormulario);
+  const datosContacto = new Contacto(datosFormulario);
+  console.log(datosContacto); //Muestro el Objeto Creado
+  datosContacto.verDatos();
 }
 
-//ejecuto la funciones
-comidaSeleecionada(comida);
-armarMenu();
+function guardarDatosEnLS(datos) {
+  //con JSON.stringify lo guardo en "datosFormulario"
+  localStorage.setItem("datosContacto", JSON.stringify(datos));
+  console.log("Sus datos se guardaron en en Local Storage");
+}
 
-//FIN CARRITO PERSONALIZADO/*/
+function recuperarDatos() {
+  return JSON.parse(localStorage.getItem("datosContacto"));
+}
+document
+  .getElementById("enviar-mensaje")
+  .addEventListener("click", guardarDatos);
+//-------FIN EMAIL-------//
