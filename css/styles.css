@@ -749,19 +749,6 @@ h6 {
   padding: 20px 0 30px 0;
 }
 
-.contact .info-item i {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 56px;
-  height: 56px;
-  font-size: 24px;
-  line-height: 0;
-  color: var(--color-primary);
-  border-radius: 50%;
-  border: 2px dotted #ffd565;
-}
-
 .contact .info-item h3 {
   font-size: 20px;
   color: #6c757d;
@@ -779,7 +766,7 @@ h6 {
 .contact .php-email-form {
   width: 100%;
   background: #fff;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0 25px rgba(6, 6, 6, 0.08);
   padding: 30px;
 }
 
@@ -859,7 +846,11 @@ h6 {
 }
 
 .contact .php-email-form button[type="submit"]:hover {
-  background: rgba(254, 185, 0, 0.8);
+  border: 2px solid #000;
+  color: rgb(0, 0, 0);
+  border: 10;
+  border-radius: 2em;
+  background: rgba(255, 255, 255, 0.8);
 }
 
 @keyframes animate-loading {
@@ -877,7 +868,6 @@ h6 {
 --------------------------------------------------------------*/
 .footer {
   color: #fff;
-  background: url("../img/footer-bg.jpg") top center no-repeat;
   background-size: cover;
   font-size: 14px;
   padding: 80px 0 60px 0;
@@ -976,12 +966,48 @@ h6 {
   border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.footer .footer-legal .credits {
-  padding-top: 4px;
-  font-size: 13px;
-  color: #fff;
+/*-- MENU CARRITO --*/
+.comida {
+  border: 2px solid #000;
+  padding: 10px;
+  border-radius: 20px;
 }
 
-.footer .footer-legal .credits a {
-  color: var(--color-primary);
+.nombre {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+}
+
+.img {
+  height: 300px;
+  width: 100%;
+}
+
+.detalle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0px 15px;
+}
+
+.detalle > .precio {
+  margin: 0;
+}
+
+.card-comida {
+  padding: 20px 0px;
+}
+
+.linea {
+  border-bottom: 1px solid #ccc;
+}
+
+.img-lista-menu {
+  max-width: 80px;
+  border-radius: 20px;
+}
+
+.precioFinalPedido {
+  min-height: 96px;
 }

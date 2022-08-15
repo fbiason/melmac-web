@@ -85,24 +85,13 @@ function usoDeDom() {
 } /*/
 //FIN MEZCLA RARA
 
-/**
-* Template Name: UpConstruction - v1.1.0
-* Template URL: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
+//--------------------------------//
+//--------------------------------//
+//--------------------------------//
+/**BOOTSTRAP
 */
 document.addEventListener("DOMContentLoaded", () => {
   "use strict";
-
-  /**
-   * Preloader
-   */
-  const preloader = document.querySelector("#preloader");
-  if (preloader) {
-    window.addEventListener("load", () => {
-      preloader.remove();
-    });
-  }
 
   /**
    * Mobile nav toggle
@@ -181,130 +170,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /**
-   * Initiate glightbox
-   */
-  const glightbox = GLightbox({
-    selector: ".glightbox",
-  });
-
-  /**
-   * Porfolio isotope and filter
-   */
-  let portfolionIsotope = document.querySelector(".portfolio-isotope");
-
-  if (portfolionIsotope) {
-    let portfolioFilter = portfolionIsotope.getAttribute(
-      "data-portfolio-filter"
-    )
-      ? portfolionIsotope.getAttribute("data-portfolio-filter")
-      : "*";
-    let portfolioLayout = portfolionIsotope.getAttribute(
-      "data-portfolio-layout"
-    )
-      ? portfolionIsotope.getAttribute("data-portfolio-layout")
-      : "masonry";
-    let portfolioSort = portfolionIsotope.getAttribute("data-portfolio-sort")
-      ? portfolionIsotope.getAttribute("data-portfolio-sort")
-      : "original-order";
-
-    window.addEventListener("load", () => {
-      let portfolioIsotope = new Isotope(
-        document.querySelector(".portfolio-container"),
-        {
-          itemSelector: ".portfolio-item",
-          layoutMode: portfolioLayout,
-          filter: portfolioFilter,
-          sortBy: portfolioSort,
-        }
-      );
-
-      let menuFilters = document.querySelectorAll(
-        ".portfolio-isotope .portfolio-flters li"
-      );
-      menuFilters.forEach(function (el) {
-        el.addEventListener(
-          "click",
-          function () {
-            document
-              .querySelector(
-                ".portfolio-isotope .portfolio-flters .filter-active"
-              )
-              .classList.remove("filter-active");
-            this.classList.add("filter-active");
-            portfolioIsotope.arrange({
-              filter: this.getAttribute("data-filter"),
-            });
-            if (typeof aos_init === "function") {
-              aos_init();
-            }
-          },
-          false
-        );
-      });
-    });
-  }
-
-  /**
-   * Init swiper slider with 1 slide at once in desktop view
-   */
-  new Swiper(".slides-1", {
-    speed: 600,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
-    slidesPerView: "auto",
-    pagination: {
-      el: ".swiper-pagination",
-      type: "bullets",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
-
-  /**
-   * Init swiper slider with 2 slides at once in desktop view
-   */
-  new Swiper(".slides-2", {
-    speed: 600,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
-    slidesPerView: "auto",
-    pagination: {
-      el: ".swiper-pagination",
-      type: "bullets",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 20,
-      },
-
-      1200: {
-        slidesPerView: 2,
-        spaceBetween: 20,
-      },
-    },
-  });
-
-  /**
-   * Initiate pURE cOUNTER
-   */
-  new PureCounter();
-
-  /**
    * Animation on scroll function and init
    */
   function aos_init() {
@@ -320,10 +185,141 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 //FIN BOOTSTRAP
+//--------------------------------//
+//--------------------------------//
+//--------------------------------//
 
-//INICIO CARRITO PERSONALIZADO
+//----------------------------------------//
+//----------------------------------------//
+//----------------------------------------//
+//INICIO CARRITO PERSONALIZADO//
+//se crea const llamada "agregarPedido". Luego se usa "querySelectorAll()" que me sirve para seleccionar todos los elementos que tengan la clase ".agregarPedido".
+const agregarPedido = document.querySelectorAll(".agregarPedido");
+//aplico forEach y la función flecha. Por cada "btnPedido" se agrega un addEventListener para registrar el evento "click" en la funcion btnAgregarPedido.
+agregarPedido.forEach((btnPedido) => {
+  btnPedido.addEventListener("click", btnAgregarPedido); //
+});
+
+//Uso querySelector para que me devuelva el primer elemento del documento//
+const btnComprar = document.querySelector(".btnComprar");
+btnComprar.addEventListener("click", finalizarCompra);
+
+const comidaMenu = document.querySelector(".comida-menu");
+//creo la función "btnAgregarPedido" con un parametro de nombre "agregar"
+function btnAgregarPedido(agregar) {
+  const btnClic = agregar.target;
+  //la clase ".comida" la meto en la variable "comida"
+  const comida = btnClic.closest(".comida");
+
+  //creo las variables que tome las clases ".nombre", ".precio" y ".img". Luego uso textContent para que me devuelva el texto
+  const comidaNombre = comida.querySelector(".nombre").textContent;
+  const comidaPrecio = comida.querySelector(".precio").textContent;
+  const comidaImg = comida.querySelector(".img").src;
+
+  //creo la función "menuCompleto" que incorpore las variables comidaNombre, comidaPrecio y comidaImg
+  menuCompleto(comidaNombre, comidaPrecio, comidaImg);
+}
+
+function menuCompleto(comidaNombre, comidaPrecio, comidaImg) {
+  const nombreDeComida = comidaMenu.getElementsByClassName("totalPedidoNombre");
+  for (let i = 0; i < nombreDeComida.length; i++) {
+    if (nombreDeComida[i].innerText === comidaNombre) {
+      let sumaComida =
+        nombreDeComida[
+          i
+        ].parentElement.parentElement.parentElement.querySelector(
+          ".cantidadComida"
+        );
+      sumaComida.value++;
+      verPrecioFinalPedido();
+      return;
+    }
+  }
+
+  //creo el elemento que voy a introducir al carrito usando dom, cada elemento que cree se va a introducir en el div
+  const totalPedido = document.createElement("div");
+  const totalPedidoComidas = `
+  <div class="row totalPedido">
+        <div class="col-6">
+            <div class="card-comida d-flex align-items-center h-100 border-bottom pb-2 pt-3">
+                <img src=${comidaImg} class="img-lista-menu">
+                <h6 class="totalPedidoNombre text-truncate ml-3 mb-0">${comidaNombre}</h6>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="d-flex align-items-center h-100 border-bottom pb-2 pt-3">
+                <p class="item-price mb-0 precioComidaPedida">${comidaPrecio}</p>
+            </div>
+        </div>
+        <div class="col-4">
+            <div
+                class="d-flex justify-content-between align-items-center h-100 border-bottom pb-2 pt-3">
+                <input class="cantidadComida" type="number"
+                    value="1">
+                <button class="btn btn-danger cancelar-pedido" type="button">Cancelar Pedido</button>
+            </div>
+        </div>
+    </div>`;
+  totalPedido.innerHTML = totalPedidoComidas;
+  comidaMenu.append(totalPedido);
+
+  totalPedido
+    .querySelector(".cancelar-pedido")
+    .addEventListener("click", borrarPedido);
+  totalPedido
+    .querySelector(".cantidadComida")
+    .addEventListener("cambiar", cambiarPedido);
+
+  verPrecioFinalPedido();
+}
+
+//funcion para ver el precio final del pedido
+function verPrecioFinalPedido() {
+  let total = 0;
+  const precioFinalPedido = document.querySelector(".precioFinalPedido");
+
+  const verTotalComidas = document.querySelectorAll(".totalPedido");
+
+  verTotalComidas.forEach((verTotalComida) => {
+    const verPrecioComidaPedida = verTotalComida.querySelector(
+      ".precioComidaPedida"
+    );
+    const precioComidaPedida = Number(
+      verPrecioComidaPedida.textContent.replace("$", "")
+    );
+    const cantidadComidaTotal = verTotalComida.querySelector(".cantidadComida");
+    const cantidadComida = Number(cantidadComidaTotal.value);
+    total = total + precioComidaPedida * cantidadComida;
+  });
+  precioFinalPedido.innerHTML = `${total.toFixed(2)}$ `;
+}
+//funcion para borrar pedido
+function borrarPedido(agregar) {
+  const btnClick = agregar.target;
+  btnClick.closest(".totalPedido").remove();
+  verPrecioFinalPedido();
+}
+
+//funcion para cambiar pedido
+function cambiarPedido(agregar) {
+  const input = agregar.target;
+  input.value <= 0 ? (input.value = 1) : null;
+  verPrecioFinalPedido();
+}
+
+//funcion para terminar compra
+function finalizarCompra() {
+  comidaMenu.innerHTML = "";
+  verPrecioFinalPedido();
+}
+
+//----------------------------------------//
+//----------------------------------------//
+//----------------------------------------//
+
+/*
 //se crea la variable const llamada "comida" con el Array de Objetos
-/*const comida = [
+const comida = [
   {
     id: 1,
     nombre: "Hamburguesa",
@@ -419,6 +415,5 @@ function armarMenu() {
 //ejecuto la funciones
 comidaSeleecionada(comida);
 armarMenu();
-
 
 //FIN CARRITO PERSONALIZADO/*/

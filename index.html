@@ -73,205 +73,163 @@
     </section><!-- End Hero Section -->
     <section id="get-started" class="get-started section-bg">
 
-
-<!-- INICIO MEZCLA RARA con JS ============================-->
-  <section>
-    <div class="dom-style">
-      <button id="btn" onclick="usoDeDom()">
-        <h1>¡Quiero una mezcla rara!</h1>
-      </button>
-      <div class="row">
-        <div class="col-6">
-          <img
-          id="will"                             
-          class="img-fluid rounded-circle h-100"
-          src="img/sorpresa.png"
-          alt="..."
-          width="100%">
-        </div>
-        <div class="col-6">
-      <p id="cualquierMenu" class="mt-8"></p>
-    </div>
-    </div>
-    </div>
-   </section>
-    <!-- FIN MEZCLA RARA con JS ============================-->
-  
-
       <!-- INICIO ARMADO DE MENÚ ============================-->
-        <section id="py-4 overflow-hidden">
-          <div class="container">
-            <div class="row h-100">
-              <div class="col-lg-7 mx-auto text-center mb-5">
-                <h5 class="fw-bold fs-3 fs-lg-5 lh-sm">Arma tu menú personalizado</h5>
-              </div>
-              <div class="col-12">
-                <div>
-                  <div>
-                    <div>
-                      <div class="row gx-3 h-100 align-items-center">
+      <section class="armando-menu">
+        <div class="container">
+            <div class="items">
+              <h1>Realice su pedido</h1>
+                <div class="row">
 
-                        <!-- inicio del plato -->
-                        <div id="comida" class="col-sm-6 col-md-4 col-xl mb-5 h-100">
-                        </div>
-                        <!-- fin del plato -->
-
-                        <!-- inicio del plato -->
-                        <div class="col-sm-6 col-md-4 col-xl mb-5 h-100">
-                          <div class="card card-span h-100 rounded-3">
-                            <img
-                              class="img-fluid rounded-3 h-100"
-                              src="img/comidas/pizza-muza.jpeg"
-                              alt="..."
-                            />
-                            <div class="card-body ps-0">
-                              <h5 class="fw-bold text-1000 text-truncate mb-1">
-                                Pizza
-                              </h5>
-                              <div>
-                                <span class="text-primary">Muzarella</span>
-                              </div>
-                              <span class="text-1000 fw-bold">$850</span>
+                  <!-- Inicio comida -->
+                    <div class="col-sm-6 col-md-4 col-xl mb-5 h-100">
+                        <div class="comida card shadow mb-4">
+                            <h3 class="nombre">PIZZA</h3>
+                            <img class="img" src="img/comidas/pizza-muza.jpeg">
+                            <div class="detalle">
+                                <h4 class="precio">$850</h4>
+                                <button class="item-button btn btn-primary agregarPedido">Subir al carrito</button>
                             </div>
-                          </div>
-                          <div class="d-grid gap-2">
-                            <a
-                              class="btn btn-lg btn-danger"
-                              href="#!"
-                              role="button"
-                              >Subir al carrito</a
-                            >
-                          </div>
                         </div>
-                        <!-- fin del plato -->
-
-                        <!-- inicio del plato -->
-                        <div class="col-sm-6 col-md-4 col-xl mb-5 h-100">
-                          <div class="card card-span h-100 rounded-3">
-                            <img
-                              class="img-fluid rounded-3 h-100"
-                              src="img/comidas/sandwich-pollo.jpeg"
-                              alt="..."
-                            />
-                            <div class="card-body ps-0">
-                              <h5 class="fw-bold text-1000 text-truncate mb-1">
-                                Sandwich
-                              </h5>
-                              <div>
-                                <span class="text-primary">De Pollo con papas</span>
-                              </div>
-                              <span class="text-1000 fw-bold">$1.200</span>
-                            </div>
-                          </div>
-                          <div class="d-grid gap-2">
-                            <a
-                              class="btn btn-lg btn-danger"
-                              href="#!"
-                              role="button"
-                              >Subir al carrito</a
-                            >
-                          </div>
-                        </div>
-                        <!-- fin del plato -->
-
-                        <!-- inicio del plato -->
-                        <div class="col-sm-6 col-md-4 col-xl mb-5 h-100">
-                          <div class="card card-span h-100 rounded-3">
-                            <img
-                              class="img-fluid rounded-3 h-100"
-                              src="img/comidas/empanadas-bondiola.png"
-                              alt="..."
-                            />
-                            <div class="card-body ps-0">
-                              <h5 class="fw-bold text-1000 text-truncate mb-1">
-                                Empanadas
-                              </h5>
-                              <div>
-                                <span class="text-primary">Bondiola x14</span>
-                              </div>
-                              <span class="text-1000 fw-bold">$1.300</span>
-                            </div>
-                          </div>
-                          <div class="d-grid gap-2">
-                            <a
-                              class="btn btn-lg btn-danger"
-                              href="#!"
-                              role="button"
-                              >Subir al carrito</a
-                            >
-                          </div>
-                        </div>
-                        <!-- fin del plato -->
-
-                        <!-- inicio del plato -->
-                        <div class="col-sm-6 col-md-4 col-xl mb-5 h-100">
-                          <div class="card card-span h-100 rounded-3">
-                            <img
-                              class="img-fluid rounded-3 h-100"
-                              src="img/comidas/salchipapas.png"
-                              alt="..."
-                            />
-                            <div class="card-body ps-0">
-                              <h5 class="fw-bold text-1000 text-truncate mb-1">
-                                Salchipapas
-                              </h5>
-                              <div>
-                                <span class="text-primary">Salchichas con papas</span>
-                              </div>
-                              <span class="text-1000 fw-bold">$900</span>
-                            </div>
-                          </div>
-                          <div class="d-grid gap-2">
-                            <a
-                              class="btn btn-lg btn-danger"
-                              href="#!"
-                              role="button"
-                              >Subir al carrito</a
-                            >
-                          </div>
-                        </div>
-                        <!-- fin del plato -->
-
-                        <!-- inicio del plato -->
-                        <div class="col-sm-6 col-md-4 col-xl mb-5 h-100">
-                          <div class="card card-span h-100 rounded-3">
-                            <img
-                              class="img-fluid rounded-3 h-100"
-                              src="img/comidas/mila-melmac.jpg"
-                              alt="..."
-                            />
-                            <div class="card-body ps-0">
-                              <h5 class="fw-bold text-1000 text-truncate mb-1">
-                                Mila Melmac
-                              </h5>
-                              <div>
-                                <span class="text-primary">Milanesa con papas</span>
-                              </div>
-                              <span class="text-1000 fw-bold">$2.500</span>
-                            </div>
-                          </div>
-                          <div class="d-grid gap-2">
-                            <a
-                              class="btn btn-lg btn-danger"
-                              href="#!"
-                              role="button"
-                              >Subir al carrito</a
-                            >
-                          </div>
-                        </div>
-                        <!-- fin del plato -->
-
-                      </div>
                     </div>
-                  </div>
-                </div>
-              </div>
+                    <!-- Fin comida -->
+
+                    <!-- Inicio comida -->
+                    <div class="col-sm-6 col-md-4 col-xl mb-5 h-100">
+                        <div class="comida card shadow mb-4">
+                            <h3 class="nombre">EMPANADAS</h3>
+
+                            <img class="img" src="img/comidas/empanadas-bondiola.png">
+
+                            <div class="detalle">
+                                <h4 class="precio">$1300</h4>
+                                <button class="item-button btn btn-primary agregarPedido">Subir al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin comida -->
+
+                    <!-- Inicio comida -->                  
+                    <div class="col-sm-6 col-md-4 col-xl mb-5 h-100">
+                        <div class="comida card shadow mb-4">
+                            <h3 class="nombre">MILA MELMAC</h3>
+
+                            <img class="img" src="img/comidas/mila-melmac.jpg">
+
+                            <div class="detalle">
+                                <h4 class="precio">$2500</h4>
+                                <button class="item-button btn btn-primary agregarPedido">Subir al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin comida -->             
+
+                    <!-- Inicio comida --> 
+                    <div class="col-sm-6 col-md-4 col-xl mb-5 h-100">
+                        <div class="comida card shadow mb-4">
+                            <h3 class="nombre">HAMBURGUESA</h3>
+
+                            <img class="img" src="img/comidas/hamburguesa.png">
+
+                            <div class="detalle">
+                                <h4 class="precio">$1100</h4>
+                                <button class="item-button btn btn-primary agregarPedido">Subir al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin comida -->
+
+                    <!-- Inicio comida --> 
+                    <div class="col-sm-6 col-md-4 col-xl mb-5 h-100">
+                        <div class="comida card shadow mb-4">
+                            <h3 class="nombre">SALCHIPAPAS</h3>
+
+                            <img class="img" src="img/comidas/salchipapas.png">
+                            <div class="detalle">
+                                <h4 class="precio">$800</h4>
+                                <button class="item-button btn btn-primary agregarPedido">Subir al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin comida -->
+
+                    <!-- Inicio comida -->                     
+                    <div class="col-sm-6 col-md-4 col-xl mb-5 h-100">
+                        <div class="comida card shadow mb-4">
+                            <h3 class="nombre">SANDWICH</h3>
+
+                            <img class="img" src="img/comidas/sandwich-pollo.jpeg">
+                            <div class="detalle">
+                                <h4 class="precio">$1400</h4>
+                                <button class="item-button btn btn-primary agregarPedido">Subir al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin comida -->
             </div>
-          </div>
-          <!-- end of .container-->
-        </section>
+        </div>
+    </section>
         <!-- FIN DE ARMADO DEL MENÚ ============================-->
 
+      <!-- INICIO TOTAL PEDIDO ============================-->
+   <section class="card-comida">
+    <div class="container">
+        <h1 class="text-center">Su pedido es</h1>
+        <hr>
+        <div class="row">
+            <div class="col-6">
+                <div class="linea">
+                    <h6>Comida</h6>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="linea">
+                    <h6 class="text-truncate">Precio</h6>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="linea">
+                    <h6>Cantidad</h6>
+                </div>
+            </div>
+        </div>
+        <div class="card-comida comida-menu">
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="precio-final-pedido d-flex align-items-center">
+                    <p class="mb-0">Total </p>
+                    <p class="ml-4 mb-0 precioFinalPedido">$ 0</p>
+                    <button class="btn btn-success ml-auto btnComprar" type="button">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <!-- FIN INICIO TOTAL PEDIDO ============================-->
+
+<!-- INICIO MEZCLA RARA con JS ============================-->
+<section>
+  <div class="dom-style">
+    <button id="btn" onclick="usoDeDom()">
+      <h1>¡Quiero una mezcla rara!</h1>
+    </button>
+    <div class="row">
+      <div class="col-6">
+        <img
+        id="will"                             
+        class="img-fluid rounded-circle h-100"
+        src="img/sorpresa.png"
+        alt="..."
+        width="100%">
+      </div>
+      <div class="col-6">
+    <p id="cualquierMenu" class="mt-8"></p>
+  </div>
+  </div>
+  </div>
+ </section>
+  <!-- FIN MEZCLA RARA con JS ============================-->
 
       <!-- INICIO INFO MELMAC ============================-->
       <section class="py-0 bg-primary-gradient">
@@ -422,8 +380,6 @@
       <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
           class="bi bi-arrow-up-short"></i></a>
 
-      <div id="preloader"></div>
-
   </main>
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
@@ -436,7 +392,7 @@
             <div class="footer-info">
               <h3>MELMAC Rotisería y Confitería</h3>
               <p>Entre Ríos 316, Rio Gallegos<br><br>
-                <strong>Teléfono:</strong>2966 449951<br>
+                <strong>Teléfono:</strong> 2966 449951<br>
                 <strong>Email:</strong> franco.biason@gmail.com<br>
               </p>
             </div>
@@ -445,8 +401,6 @@
           <div class="col-lg-4 col-md-4 footer-links justify-content-center">
             <h4>Enlaces útiles</h4>
             <ul>
-              <li><a href="#">Servicios</a></li>
-              <li><a href="#">Contacto</a></li>
               <li><a href="#">Política de Privacidad</a></li>
               <li><a href="#">Términos y Condiciones</a></li>
             </ul>
