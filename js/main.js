@@ -208,7 +208,6 @@ function finalizarCompra() {
 //-------FIN PEDIDO PERSONALIZADO-------//
 
 //-------INICIO EMAIL-------//
-
 //creo la clase "Contacto" que va a tener un constructor y recibe al objeto "contacto"
 class Contacto {
   constructor(contacto) {
