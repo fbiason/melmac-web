@@ -242,13 +242,13 @@ function guardarDatos() {
     mensajeContacto: mensaje,
   };
 
-  console.log(datos); //Muestro el Objeto Creado
+  console.log(datos);
   guardarDatosEnLS(datos);
 
   let datosFormulario = recuperarDatos();
   console.log(datosFormulario);
   const datosContacto = new Contacto(datosFormulario);
-  console.log(datosContacto); //Muestro el Objeto Creado
+  console.log(datosContacto);
   datosContacto.verDatos();
 }
 
