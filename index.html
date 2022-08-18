@@ -29,11 +29,11 @@
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="header d-flex align-items-center" style="background-color: grey">
+  <header id="header" class="header d-flex align-items-center">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
-        <img src="img/logo/logo-horizontal.png" class="img-fluid" alt="ml legales" />
+        <img src="img/logo/logo-horizontal-white.png" class="img-fluid" alt="ml legales" />
       </a>
 
       <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
@@ -41,8 +41,8 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a href="index.html" class="active">Inicio</a></li>
-          <li><a href="#">Menú</a></li>
-          <li><a href="#">Mezclas</a></li>
+          <li><a href="#menu">Menú</a></li>
+          <li><a href="#mezclas">Mezclas</a></li>
         </ul>
       </nav><!-- .navbar -->
 
@@ -68,92 +68,115 @@
 
     </section><!-- End Hero Section -->
     <section id="get-started" class="get-started section-bg">
-  
+ 
       <!-- INICIO ARMADO DE MENÚ ============================-->
       <section class="armando-menu">
-        <div class="container">
-              <h1>Realice su pedido</h1>
+          <div class="col-lg-7 mx-auto text-center mb-5">
+            <h3 class="fw-bold fs-3 fs-lg-5 lh-sm">REALICE SU PEDIDO</h3>
+          </div>
                 <div class="row">
 
                   <!-- Inicio comida -->
-                    <div class="col-sm-6 col-md-4 col-xl mb-5 h-100">
-                        <div class="comida card shadow mb-4">
-                            <h3 class="nombre">PIZZA</h3>
-                            <img class="img" src="img/comidas/pizza-muza.jpeg">
+                    <div class="comida col-sm-6 col-md-4 col-xl mb-5 h-100">
+                        <div class="card card-span h-100 rounded-3">
+                            <img class="img img-fluid rounded-3 h-100" src="img/comidas/empanadas.jpg">
+                            <h3 class="nombre fw-bold text-1000 text-truncate mb-1">EMPANADAS</h3>
                             <div class="detalle">
-                                <h4 class="precio">$850</h4>
-                                <button class="btn btn-primary agregarPedido">Subir al carrito</button>
-                            </div>
+                               <p>Bondiola x 14 unid.</p>
+                              <h4 class="precio">$1300</h4>
+                                
+                            </div>   
+                        </div>
+                        <div>
+                          <button class="btn btn-primary agregarPedido">Subir al carrito</button>
                         </div>
                     </div>
                     <!-- Fin comida -->
 
-                    <!-- Inicio comida -->
-                    <div class="col-sm-6 col-md-4 col-xl mb-5 h-100">
-                        <div class="comida card shadow mb-4">
-                            <h3 class="nombre">EMPANADAS</h3>
-                            <img class="img" src="img/comidas/empanadas-bondiola.png">
-                            <div class="detalle">
-                                <h4 class="precio">$1300</h4>
-                                <button class="btn btn-primary agregarPedido">Subir al carrito</button>
-                            </div>
-                        </div>
+                  <!-- Inicio comida -->
+                  <div class="comida col-sm-6 col-md-4 col-xl mb-5 h-100">
+                    <div class="card card-span h-100 rounded-3">
+                        <img class="img img-fluid rounded-3 h-100" src="img/comidas/papas-cheddar.jpg">
+                        <h3 class="nombre fw-bold text-1000 text-truncate mb-1">PAPAS CON CHEDDAR</h3>
+                        <div class="detalle">
+                           <p>Extra queso y verdeo</p>
+                          <h4 class="precio">$1000</h4>                           
+                        </div>   
                     </div>
-                    <!-- Fin comida -->
+                    <div>
+                      <button class="btn btn-primary agregarPedido">Subir al carrito</button>
+                    </div>
+                  </div>
+                  <!-- Fin comida -->
 
-                    <!-- Inicio comida -->                  
-                    <div class="col-sm-6 col-md-4 col-xl mb-5 h-100">
-                        <div class="comida card shadow mb-4">
-                            <h3 class="nombre">MILA MELMAC</h3>
-                            <img class="img" src="img/comidas/mila-melmac.jpg">
-                            <div class="detalle">
-                                <h4 class="precio">$2500</h4>
-                                <button class="btn btn-primary agregarPedido">Subir al carrito</button>
-                            </div>
-                        </div>
+                  <!-- Inicio comida -->
+                  <div class="comida col-sm-6 col-md-4 col-xl mb-5 h-100">
+                    <div class="card card-span h-100 rounded-3">
+                        <img class="img img-fluid rounded-3 h-100" src="img/comidas/hamburguesa.png">
+                        <h3 class="nombre fw-bold text-1000 text-truncate mb-1">HAMBURGUESA</h3>
+                        <div class="detalle">
+                           <p>De carne con papas</p>
+                          <h4 class="precio">$1100</h4>
+                            
+                        </div>   
                     </div>
-                    <!-- Fin comida -->             
+                    <div>
+                      <button class="btn btn-primary agregarPedido">Subir al carrito</button>
+                    </div>
+                  </div>
+                  <!-- Fin comida -->
 
-                    <!-- Inicio comida --> 
-                    <div class="col-sm-6 col-md-4 col-xl mb-5 h-100">
-                        <div class="comida card shadow mb-4">
-                            <h3 class="nombre">HAMBURGUESA</h3>
-                            <img class="img" src="img/comidas/hamburguesa.png">
-                            <div class="detalle">
-                                <h4 class="precio">$1100</h4>
-                                <button class="btn btn-primary agregarPedido">Subir al carrito</button>
-                            </div>
-                        </div>
+                  <!-- Inicio comida -->
+                  <div class="comida col-sm-6 col-md-4 col-xl mb-5 h-100">
+                    <div class="card card-span h-100 rounded-3">
+                        <img class="img img-fluid rounded-3 h-100" src="img/comidas/mila-melmac.jpg">
+                        <h3 class="nombre fw-bold text-1000 text-truncate mb-1">MILA MELMAC</h3>
+                        <div class="detalle">
+                           <p>Milanesa gigante</p>
+                          <h4 class="precio">$2500</h4>
+                        </div>   
                     </div>
-                    <!-- Fin comida -->
+                    <div>
+                      <button class="btn btn-primary agregarPedido">Subir al carrito</button>
+                    </div>
+                  </div>
+                  <!-- Fin comida -->
 
-                    <!-- Inicio comida --> 
-                    <div class="col-sm-6 col-md-4 col-xl mb-5 h-100">
-                        <div class="comida card shadow mb-4">
-                            <h3 class="nombre">SALCHIPAPAS</h3>
-                            <img class="img" src="img/comidas/salchipapas.png">
-                            <div class="detalle">
-                                <h4 class="precio">$800</h4>
-                                <button class="btn btn-primary agregarPedido">Subir al carrito</button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Fin comida -->
+                 <!-- Inicio comida -->
+                  <div class="comida col-sm-6 col-md-4 col-xl mb-5 h-100">
+                    <div class="card card-span h-100 rounded-3">
+                    <img class="img img-fluid rounded-3 h-100" src="img/comidas/pizza-muza.jpeg">
+                    <h3 class="nombre fw-bold text-1000 text-truncate mb-1">PIZZA</h3>
+                      <div class="detalle">
+                       <p>Pizza de Muza</p>
+                      <h4 class="precio">$850</h4>
+                        
+                      </div>   
+                   </div>
+                  <div>
+                  <button class="btn btn-primary agregarPedido">Subir al carrito</button>
+                  </div>
+                 </div>
+                  <!-- Fin comida -->
 
-                    <!-- Inicio comida -->                     
-                    <div class="col-sm-6 col-md-4 col-xl mb-5 h-100">
-                        <div class="comida card shadow mb-4">
-                            <h3 class="nombre">SANDWICH</h3>
-                            <img class="img" src="img/comidas/sandwich-pollo.jpeg">
-                            <div class="detalle">
-                                <h4 class="precio">$1400</h4>
-                                <button class="btn btn-primary agregarPedido">Subir al carrito</button>
-                            </div>
-                        </div>
+                 <!-- Inicio comida -->
+                 <div class="comida col-sm-6 col-md-4 col-xl mb-5 h-100">
+                  <div class="card card-span h-100 rounded-3">
+                    <img class="img img-fluid rounded-3 h-100" src="img/comidas/salchipapas.png">
+                    <h3 class="nombre fw-bold text-1000 text-truncate mb-1">SALCHIPAPAS</h3>
+                      <div class="detalle">
+                       <p>Con mucho queso</p>
+                      <h4 class="precio">$850</h4>
+                        
+                     </div>   
                     </div>
-                    <!-- Fin comida -->
-            </div>
-        </div>
+                  <div>
+                  <button class="btn btn-primary agregarPedido">Subir al carrito</button>
+                  </div>
+                </div>
+                 <!-- Fin comida -->                
+                
+              </div>
     </section>
         <!-- FIN DE ARMADO DEL MENÚ ============================-->
 
@@ -191,9 +214,9 @@
                     <!--Inicio uso SWEET ALERT --->           
             <div class="col-lg-12">
               <div class="precio-final-pedido d-flex align-items-center">
-                <p class="mb-0">Total </p>
+                <p class="mb-0 precioFinalPedid">Total </p>
                 <p class="ml-4 mb-0 precioFinalPedido">$ 0</p>
-                <button id="comprar" class="BTN btn-success ml-auto btnComprar">Finalizar Compra</button>
+                <button id="comprar" class="btn btn-warning ml-auto btnComprar">Finalizar Compra</button>
               </div>
           </div>
               <!---Fin uso SWEET ALERT --->  
@@ -206,7 +229,7 @@
         <!-- FIN INICIO TOTAL PEDIDO ============================-->
 
 <!-- INICIO MEZCLA RARA con JS ============================-->
-<section>
+<section id="mezclas">
   <div class="dom-style">
     <button class="btn-mezcla" onclick="usoDeDom()">
       <h1>¡Quiero una mezcla rara!</h1>
@@ -306,7 +329,7 @@
         <!-- end of .container-->
       </section>
       <!-- FIN INFO MELMAC ============================-->
-
+      
       <!-- ======= INICIO SECCIÓN CONTACTO ======= -->
       <section id="contacto" class="contact">
         <div class="container" data-aos="fade-up" data-aos-delay="100">

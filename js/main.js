@@ -184,7 +184,7 @@ function verPrecioFinalPedido() {
     const cantidadComida = Number(cantidadComidaTotal.value);
     total = total + precioComidaPedida * cantidadComida;
   });
-  precioFinalPedido.innerHTML = `${total.toFixed(2)}$ `;
+  precioFinalPedido.innerHTML = `$ ${total.toFixed(2)}`;
 }
 //funcion para borrar pedido
 function borrarPedido(agregar) {
