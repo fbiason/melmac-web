@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/fbiason/melmac-web#readme",
   "dependencies": {
+    "sweetalert2": "^11.4.27",
     "test": "^3.1.0"
   }
 }

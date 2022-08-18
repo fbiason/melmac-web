@@ -13,7 +13,7 @@ style.innerHTML = `
     color: black;
 }
 
-button {
+.btn-mezcla {
     width: 250px;
     height: 150px;
     background: orange;

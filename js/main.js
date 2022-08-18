@@ -264,3 +264,20 @@ document
   .getElementById("enviar-mensaje")
   .addEventListener("click", guardarDatos);
 //-------FIN EMAIL-------//
+
+//----SWEET ALERT----//
+const btn = document.querySelector("#comprar");
+btn.addEventListener("click", () => {
+  Swal.fire({
+    title: "¿Finalizo su compra?",
+    showDenyButton: true,
+    showCancelButton: true,
+    confirmButtonText: "Bueno dale 🙂",
+    denyButtonText: `Sigo comprando 🐷`,
+  }).then((result) => {
+    /* Aplico el Operador Terniario*/
+    result.isConfirmed
+      ? Swal.fire("Su pedido se realizo con éxito, ¡Buen provecho! 🍽️")
+      : Swal.fire("Come... ¡O morire! 🐰");
+  });
+});
