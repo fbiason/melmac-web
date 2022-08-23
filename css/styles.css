@@ -30,6 +30,7 @@
   width: 9rem;
   height: 3.5rem;
   text-align: center;
+  justify-content: center;
   border-color: black;
   border-radius: 1rem;
 }
@@ -699,4 +700,19 @@ h6 {
 
 .precioFinalPedido {
   min-height: 96px;
+}
+
+.comida h3 {
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.comida p {
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.comida h4 {
+  padding: 0.5rem;
+  text-align: center;
 }
