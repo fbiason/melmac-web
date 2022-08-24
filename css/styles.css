@@ -716,3 +716,16 @@ h6 {
   padding: 0.5rem;
   text-align: center;
 }
+
+.comida img {
+  width: 20rem;
+  height: 20rem;
+}
+
+.btnComprar {
+  font-weight: bold;
+  color: rgba(255, 26, 14, 0.955);
+}
+/*--------------------------------------------------------------
+# MEZCLA
+--------------------------------------------------------------*/

@@ -136,7 +136,7 @@ function menuCompleto(comidaNombre, comidaPrecio, comidaImg) {
         <div class="col-6">
             <div class="card-comida d-flex align-items-center h-100 border-bottom pb-2 pt-3">
                 <img src=${comidaImg} class="img-lista-menu">
-                <h6 class="totalPedidoNombre text-truncate ml-3 mb-0">${comidaNombre}</h6>
+                <h6 class="totalPedidoNombre text-truncate ml-3 mb-0 mx-3">${comidaNombre}</h6>
             </div>
         </div>
         <div class="col-2">
@@ -147,7 +147,7 @@ function menuCompleto(comidaNombre, comidaPrecio, comidaImg) {
         <div class="col-4">
             <div
                 class="d-flex justify-content-between align-items-center h-100 border-bottom pb-2 pt-3">
-                <input class="cantidadComida" type="number"
+                <input class="cantidadComida text-center" type="number"
                     value="1">
                 <button class="btn btn-danger cancelar-pedido" type="button">Cancelar Pedido</button>
             </div>
