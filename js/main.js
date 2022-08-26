@@ -291,3 +291,82 @@ privacidad.addEventListener("click", () => {
     "info"
   );
 });
+
+//----APLICANDO API----//
+const btnApiBuscar = document.getElementById("btn-api-buscar");
+const comidaApi = document.getElementById("comida-api");
+const apiDetalleContent = document.querySelector(".api-detalles-content");
+const btnApiClose = document.getElementById("btn-api-close");
+
+// Aplico Event Linstener con click
+btnApiBuscar.addEventListener("click", apiRecetaComida);
+comidaApi.addEventListener("click", getReceta);
+btnApiClose.addEventListener("click", () => {
+  apiDetalleContent.parentElement.classList.remove("ver-receta");
+});
+
+// Creo la función "apiRecetaComida" e incorporo el fetch con el enlace a la API para obtener la lista de comida con su receta
+function apiRecetaComida() {
+  let buscadorApi = document.getElementById("buscador-api").value.trim();
+  fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${buscadorApi}`)
+    .then((response) => response.json())
+    .then((data) => {
+      let cardComidaApi = "";
+      if (data.meals) {
+        data.meals.forEach((meal) => {
+          cardComidaApi += `
+                    <div class = "comida-item" data-id = "${meal.idMeal}">
+                        <div class = "api-img">
+                            <img src = "${meal.strMealThumb}" alt = "comida">
+                        </div>
+                        <div class = "comida-api-name">
+                            <h3>${meal.strMeal}</h3>
+                            <a href = "#" class = "btn-receta">Ver receta</a>
+                        </div>
+                    </div>
+                `;
+        });
+        comidaApi.classList.remove("sin-comida");
+      } else {
+        cardComidaApi =
+          "La comida seleccionada no se encuentra <p>(quizas deba escribirlo en ingles...)</p>";
+        comidaApi.classList.add("sin-comida");
+      }
+
+      comidaApi.innerHTML = cardComidaApi;
+    });
+}
+
+// Recetas de comida
+function getReceta(e) {
+  e.preventDefault();
+  if (e.target.classList.contains("btn-receta")) {
+    let mealItem = e.target.parentElement.parentElement;
+    fetch(
+      `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealItem.dataset.id}`
+    )
+      .then((response) => response.json())
+      .then((data) => recetaDeComida(data.meals));
+  }
+}
+
+function recetaDeComida(plato) {
+  console.log(plato);
+  plato = plato[0];
+  let cardComidaApi = `
+        <h2 class = "receta-title">${plato.strMeal}</h2>
+        <p class = "receta-categoria">${plato.strCategory}</p>
+        <div class = "receta-info">
+            <h3>Receta:</h3>
+            <p>${plato.strInstructions}</p>
+        </div>
+        <div class = "receta-img">
+            <img src = "${plato.strMealThumb}" alt = "">
+        </div>
+        <div class = "receta-link">
+            <a href = "${plato.strYoutube}" target = "_blank">Ver video</a>
+        </div>
+    `;
+  apiDetalleContent.innerHTML = cardComidaApi;
+  apiDetalleContent.parentElement.classList.add("ver-receta");
+}
