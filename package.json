@@ -10,14 +10,16 @@
     "type": "git",
     "url": "git+https://github.com/fbiason/melmac-web.git"
   },
-  "author": "",
+  "author": "Biason Franco",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/fbiason/melmac-web/issues"
   },
   "homepage": "https://github.com/fbiason/melmac-web#readme",
   "dependencies": {
+    "node-sass": "^7.0.1",
     "sweetalert2": "^11.4.27",
     "test": "^3.1.0"
-  }
+  },
+  "devDependencies": {}
 }

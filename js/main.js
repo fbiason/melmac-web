@@ -293,7 +293,7 @@ privacidad.addEventListener("click", () => {
 });
 
 //----APLICANDO API----//
-const btnApiBuscar = document.getElementById("btn-api-buscar");
+const btnApiBuscar = document.getElementById("search-btn");
 const comidaApi = document.getElementById("comida-api");
 const apiDetalleContent = document.querySelector(".api-detalles-content");
 const btnApiClose = document.getElementById("btn-api-close");

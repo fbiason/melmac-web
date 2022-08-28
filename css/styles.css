@@ -561,6 +561,12 @@ h6 {
 }
 
 /*--------------------------------------------------------------
+# MEZCLA
+--------------------------------------------------------------*/
+.img-mezcla {
+  width: 40%;
+}
+/*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
 .contact .info-item {
@@ -741,42 +747,40 @@ h6 {
   margin-bottom: 1rem;
 }
 
-.container-api {
-  min-height: 100vh;
-}
 .comida-wrapper {
   margin: 0 auto;
   padding: 2rem;
   background: rgb(197, 189, 189);
   text-align: center;
 }
+
 .buscar-comida {
   margin: 2rem 0;
 }
 
 .buscar-comida-box {
-  margin: 1.2rem 0;
+  margin: 2.2rem 0;
   display: flex;
   align-items: stretch;
 }
 .buscar-api,
-.btn-api-buscar {
+.search-btn {
   width: 100%;
+  height: 4rem;
+  border-radius: 10rem;
 }
 .buscar-api {
   padding: 0 1rem;
-  font-size: 1.1rem;
+  font-size: 0.8rem;
   font-family: inherit;
   outline: 0;
-  border: 1px solid;
+  border: 0.5px solid;
   color: rgb(0, 0, 0);
-  border-top-left-radius: 2rem;
-  border-bottom-left-radius: 2rem;
 }
 .buscar-api::placeholder {
   color: black;
 }
-.btn-api-buscar {
+.search-btn {
   width: 55px;
   height: 55px;
   font-size: 1.8rem;
@@ -789,11 +793,11 @@ h6 {
   -ms-transition: all 0.4s linear;
   -o-transition: all 0.4s linear;
 }
-.btn-api-buscar:hover {
+.search-btn:hover {
   background: rgb(228, 62, 62);
 }
 .comida-resultado {
-  margin-top: 4rem;
+  margin-top: 1rem;
 }
 #comida-api {
   margin: 2.4rem 0;
@@ -818,6 +822,7 @@ h6 {
 .comida-api-name h3 {
   font-size: 1.4rem;
 }
+
 .btn-receta {
   text-decoration: none;
   color: #fff;
