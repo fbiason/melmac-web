@@ -273,12 +273,23 @@ btn.addEventListener("click", () => {
     showDenyButton: true,
     showCancelButton: true,
     confirmButtonText: "Bueno dale 🙂",
-    denyButtonText: `Sigo comprando 🐷`,
+    denyButtonText: "Sigo comprando 🐷",
+    customClass: {
+      actions: "my-actions",
+      cancelButton: "order-1 right-gap",
+      confirmButton: "order-2",
+      denyButton: "order-3",
+    },
   }).then((result) => {
-    /* Aplico el Operador Terniario*/
-    result.isConfirmed
-      ? Swal.fire("Su pedido se realizo con éxito, ¡Buen provecho! 🍽️")
-      : Swal.fire("Come... ¡O morire! 🐰");
+    if (result.isConfirmed) {
+      Swal.fire(
+        "Su pedido se realizo con éxito, ¡Buen provecho! 🍽️",
+        "",
+        "success"
+      );
+    } else if (result.isDenied) {
+      Swal.fire("Come... ¡O morire! 🐰", "", "");
+    }
   });
 });
 
