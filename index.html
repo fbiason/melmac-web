@@ -357,28 +357,26 @@
 
             <div class="col-lg-6">
               <form>
-                <div class="row gy-4">
-                  <div class="col-lg-6 form-group">
-                    <input id="nombre" type="text" name="name" class="form-control" placeholder="Nombre" required>
-                  </div>
-                  <div class="col-lg-6 form-group">
-                    <input id="email" type="email" class="form-control" name="email" placeholder="Mail" required>
-                  </div>
+                <div class="mb-2">
+                  <label for="nombre" class="form-label"></label>
+                  <input type="text" class="form-control" id="nombre" placeholder="Nombre">
                 </div>
-                <div class="form-group">
-                  <input id="asunto" type="text" class="form-control mt-2" name="subject" placeholder="Asunto" required>
+                <div class="mb-2">
+                  <label for="email" class="form-label"></label>
+                  <input type="text" class="form-control" id="email" placeholder="Email">
                 </div>
-                <div class="form-group">
-                  <textarea id="mensaje" class="form-control mt-2" name="message" rows="5" placeholder="Mensaje"
-                    required></textarea>
+                <div class="mb-2">
+                  <label for="asunto" class="form-label"></label>
+                  <input type="text" class="form-control" id="asunto" placeholder="Asunto">
+                </div>
+                <div class="mb-2">
+                  <label for="mensaje" class="form-label"></label>
+                  <textarea name="mensaje" id="mensaje" cols="30" rows="10" class="form-control" placeholder="Mensaje"></textarea>
                 </div>
                 <div class="text-center">
-                  <button id="enviar-mensaje" class="btn btn-dark">Enviar Mensaje</button>
-                </div>
-                <div id="resultado"></div>
+                <button type="button" id="btn-form" class="btn btn-dark ml-auto btnComprar">Enviar Mensaje</button></div>
               </form>
             </div>
-
           </div>
         </div>
       </section>

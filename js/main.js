@@ -217,12 +217,13 @@ class Contacto {
     this.asunto = contacto.asuntoContacto;
     this.mensaje = contacto.mensajeContacto;
   }
-  verDatos() {
+
+  mostrarDatos() {
     this.nombre = this.nombre.toUpperCase();
     let contenido = `<b>Nombre:</b> ${this.nombre}<br>
-    <b>Email:</b> ${this.email}<br>
-    <b>Asunto:</b> ${this.asunto}<br>
-    <b>Mensaje:</b> ${this.mensaje}<br>`;
+        <b>Email:</b> ${this.email}<br>
+        <b>Asunto:</b> ${this.asunto}<br>
+        <b>Mensaje:</b> ${this.mensaje}<br>`;
     document.getElementById("resultado").innerHTML = contenido;
   }
 }
@@ -240,29 +241,26 @@ function guardarDatos() {
     asuntoContacto: asunto,
     mensajeContacto: mensaje,
   };
-
   console.log(datos);
   guardarDatosEnLS(datos);
 
-  let datosFormulario = recuperarDatos();
-  console.log(datosFormulario);
-  const datosContacto = new Contacto(datosFormulario);
+  let datosStorage = cargarDatosEnLS();
+  console.log(datosStorage);
+  const datosContacto = new Contacto(datosStorage);
   console.log(datosContacto);
-  datosContacto.verDatos();
+  datosContacto.mostrarDatos();
 }
-
+//con JSON.stringify lo guardo en "datosFormulario"
 function guardarDatosEnLS(datos) {
-  //con JSON.stringify lo guardo en "datosFormulario"
   localStorage.setItem("datosContacto", JSON.stringify(datos));
-  console.log("Sus datos se guardaron en en Local Storage");
+  console.log("Los datos del Formulario se guardaron en LocalStorage");
 }
 
-function recuperarDatos() {
+function cargarDatosEnLS() {
   return JSON.parse(localStorage.getItem("datosContacto"));
 }
-document
-  .getElementById("enviar-mensaje")
-  .addEventListener("click", guardarDatos);
+
+document.getElementById("btn-form").addEventListener("click", guardarDatos);
 //-------FIN EMAIL-------//
 
 //----SWEET ALERT----//
