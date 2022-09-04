@@ -6,5 +6,6 @@ Profesor: Verón Javier
 Tutor: Baladi Jean Paul
 mail: franco.biason@gmail.com
 
+Trabajo Final JavaScript
 Fecha entrega
-28/08/22
+04/09/22
